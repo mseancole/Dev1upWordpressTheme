@@ -1,0 +1,27 @@
+hr {
+	border:0;
+	height:1px;
+	background-image:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,0.75),rgba(255,255,255,0));
+}
+
+.section.row .first {
+	margin-top:-5%;
+	margin-bottom:-10%;
+}
+
+.comments {
+	text-align:right;
+}
+
+.similar div {
+	background-color:#2e1630;
+}
+
+.similar small {
+	display:block;
+	text-align:right;
+}
+
+.similar h4 {
+	padding-bottom:10%;
+}

@@ -1,0 +1,30 @@
+#scrollspy li {
+	display:none;
+}
+
+#scrollspy li.active, #scrollspy li.always {
+	display:block;
+}
+
+#scrollspy li.active {
+	color:#614f63;
+}
+
+#scrollspy .nav>li>a {
+	padding:10px 10px;
+}
+
+#scrollspy .nav-pills>li.active>a {
+	color:#614f63;
+	background-color:transparent;
+}
+
+#scrollspy .nav>li.always>a:focus, #scrollspy .nav>li.always>a:hover {
+	color:#808080;
+	background-color:transparent;
+}
+
+#scrollspy .nav>li.always {
+	margin-left:30px;
+	margin-right:-20px;
+}

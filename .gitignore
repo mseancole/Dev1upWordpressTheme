@@ -1,0 +1,15 @@
+Vagrantfile
+.vagrant
+puphpet
+.htaccess
+
+dist/*.php
+dist/*.html
+dist/*.txt
+dist/wp-admin
+dist/wp-includes
+dist/wp-content/plugins
+dist/wp-content/upgrade
+dist/wp-content/uploads
+dist/wp-content/*.php
+dist/wp-content/themes/*.php

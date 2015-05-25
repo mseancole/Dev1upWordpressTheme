@@ -1,0 +1,33 @@
+{
+  "name": "dev1up",
+  "version": "1.0.0",
+  "description": "DEV1UP Blog",
+  "devDependencies": {
+  	"browser-sync": "latest",
+  	"jshint": "latest",
+  	"uglify-js": "latest",
+  	"csslint": "latest",
+  	"clean-css": "latest",
+  	"nodemon": "latest",
+  	"parallelshell": "latest"
+  },
+  "scripts": {
+    "live": "browser-sync start --proxy \"http://local.dev1up\" --files \"dist/wp-content/themes/dev1up\"",
+
+    "prebuild-js": "jshint src/assets/scripts/*.js",
+    "build-js": "cat src/assets/scripts/*.js | uglifyjs -o dist/wp-content/themes/dev1up/assets/scripts/main.min.js -c -m",
+    "prebuild-css": "csslint src/assets/styles/*.css",
+    "build-css": "cat src/assets/styles/*.css | cleancss -o dist/wp-content/themes/dev1up/style.css",
+    "build-php": "cp src/*.php dist/wp-content/themes/dev1up",
+
+    "watch-js": "nodemon -e js -w src/assets/scripts -x 'npm run build-js'",
+    "watch-css": "nodemon -e css -w src/assets/styles -x 'npm run build-css'",
+    "watch-php": "nodemon -e php -w src/ -x 'npm run build-php'",
+
+    "build": "npm run build-php && npm run build-js && npm run build-css",
+    "build-watch": "parallelshell 'npm run watch-php' 'npm run watch-js' 'npm run watch-css'",
+
+    "compile": "cd dist/wp-content/themes && zip -r dev1up.zip dev1up"
+  },
+  "author": "mseancole"
+}

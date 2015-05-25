@@ -1,0 +1,44 @@
+#affixed {
+	width: 369px;
+}
+
+#affixed.page-header {
+	border:none;
+}
+
+.blog_widget {
+	margin-top:25px;
+}
+
+.blog_widget .tagcloud {
+	margin:0 25px;
+}
+
+.blog_widget h3.bg-primary {
+	margin:25px 15px 10px;
+}
+
+.blog_widget ul {
+	-webkit-padding-start:0;
+}
+
+.blog_widget li {
+	display:block;
+	list-style:none;
+	padding:10px 0;
+	margin:0 25px;
+	border-bottom:1px white;
+	border-bottom-style:dotted;
+}
+
+.about_widget .row div:first-child, .blog_widget .row div:first-child {
+	text-align:right;
+}
+
+.about_widget .row .textwidget, .blog_widget .row .textwidget {
+	text-align:left !important;
+}
+
+.blog_widget span.post-date {
+	display:block;
+}
