@@ -94,3 +94,31 @@ function new_comment_fields( $user_identity, $commenter = array() ) {
         'title_reply' => '<h3 class="bg-primary">' . __( 'Join the Discussion' ) . '</h3>'
     );
 }
+
+function page_description() {
+    if( ! is_single() ) {
+        return bloginfo( 'description' );
+    }
+
+    $id = get_the_id();
+    $post = get_post( $id );
+    setup_postdata( $post );
+    return get_the_excerpt();
+}
+
+function page_keywords() {
+    $tags = is_single() ? get_the_tags() : get_tags();
+
+    $keywords = array();
+    foreach( $tags AS $tag ) {
+        $keywords[] = $tag->name;
+    }
+
+    return implode( ',', $keywords );
+}
+
+function page_title() {
+    $title = bloginfo( 'name' );
+    $subtitle = is_single() ? ' - ' . get_the_title() : '';
+    return $title . $subtitle;
+}

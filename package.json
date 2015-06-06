@@ -12,7 +12,7 @@
   	"parallelshell": "latest"
   },
   "scripts": {
-    "live": "browser-sync start --proxy \"http://local.dev1up\" --files \"dist/wp-content/themes/dev1up\"",
+    "live": "browser-sync start --proxy \"http://local.puphpet\" --files \"dist/wp-content/themes/dev1up\"",
 
     "prebuild-js": "jshint src/assets/scripts/*.js",
     "build-js": "cat src/assets/scripts/*.js | uglifyjs -o dist/wp-content/themes/dev1up/assets/scripts/main.min.js -c -m",
