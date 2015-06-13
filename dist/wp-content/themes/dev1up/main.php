@@ -31,11 +31,11 @@
 						<?php get_sidebar(  'about' ); ?>
 					</li>
 					<li role="presentation" class="active">
-						<a href="#about"></a>
+						<a href="#about" class="hidden"></a>
 						<?php get_sidebar( 'doing' ); ?>
 					</li>
 					<li role="presentation">
-						<a href="#blog"></a>
+						<a href="#blog" class="hidden"></a>
 						<?php get_sidebar( 'blog' ); ?>
 					</li>
 				</ul>
