@@ -3,27 +3,25 @@
 		<div id="affixed" class="row"
 			data-spy="affix"
 			data-offset-top="0">
-			<h1 class="scrollspy" class="row">
-				<div class="col-xs-12">
-					<ul class="nav nav-pills">
-						<li role="presentation" class="always">
-							<a class="gray"><?php echo $_SPLIT[ 'first' ]; ?>/</a>
-						</li>
-						<li role="presentation" class="active">
-							<a href="#about"><?php echo $_SPLIT[ 'last' ]; ?></a>
-						</li>
-						<li role="presentation">
-							<a href="#blog">LOG</a>
-						</li>
-						<li role="presentation">
-							<a href="#frontend">FRONT-END</a>
-						</li>
-						<li role="presentation">
-							<a href="#backend">BACK-END</a>
-						</li>
-					</ul>
-				</div>
-			</h1>
+			<div id="title" class="scrollspy row col-xs-12">
+				<ul class="nav nav-pills">
+					<li role="presentation" class="always">
+						<a class="gray"><?php echo $_SPLIT[ 'first' ]; ?>/</a>
+					</li>
+					<li role="presentation" class="active">
+						<a href="#about"><?php echo $_SPLIT[ 'last' ]; ?></a>
+					</li>
+					<li role="presentation">
+						<a href="#blog">LOG</a>
+					</li>
+					<li role="presentation">
+						<a href="#frontend">FRONT-END</a>
+					</li>
+					<li role="presentation">
+						<a href="#backend">BACK-END</a>
+					</li>
+				</ul>
+			</div>
 
 			<div class="scrollspy">
 				<ul class="nav">
