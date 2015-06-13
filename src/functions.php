@@ -1,9 +1,20 @@
 <?php
 if( function_exists( 'register_sidebar' ) ) {
     register_sidebar( array(
-    	'id' => 'blog',
-    	'name' => 'Blog Sidebar',
-        'description' => 'These widgets will appear in the left sidebar under the About Widget.',
+    	'id' => 'about',
+    	'name' => 'About Widget',
+        'description' => 'These widgets will appear in the left sidebar under the Site name and will always be visible.',
+        'class' => '',
+        'before_widget' => '<div class="row">',
+        'after_widget' => '</div></div>',
+        'before_title' => '<div class="col-xs-6 col-md-4">',
+        'after_title' => '</div><div class="col-xs-12 col-sm-6 col-md-8">'
+    ) );
+
+    register_sidebar( array(
+        'id' => 'blog',
+        'name' => 'Blog Sidebar',
+        'description' => 'These widgets will appear in the left sidebar under the About Widget. They will only appear when the Blog is visible',
         'class' => '',
         'before_widget' => '',
         'after_widget' => '',
@@ -12,14 +23,14 @@ if( function_exists( 'register_sidebar' ) ) {
     ) );
 
     register_sidebar( array(
-    	'id' => 'about',
-    	'name' => 'About Widget',
-        'description' => 'These widgets will appear in the left sidebar under the Site name.',
+        'id' => 'doing',
+        'name' => 'What I am Doing',
+        'description' => 'These widgets will appear in the left sidebar under the About Widget. They will only appear when the Jumbotron is visible.',
         'class' => '',
-        'before_widget' => '<div class="row">',
-        'after_widget' => '</div></div>',
-        'before_title' => '<div class="col-xs-6 col-md-4">',
-        'after_title' => '</div><div class="col-xs-12 col-sm-6 col-md-8">'
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3 class="bg-primary">',
+        'after_title' => '</h3>'
     ) );
 
     register_sidebar( array(
