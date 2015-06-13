@@ -23,6 +23,17 @@ if( function_exists( 'register_sidebar' ) ) {
     ) );
 
     register_sidebar( array(
+        'id' => 'single',
+        'name' => 'Article Sidebar',
+        'description' => 'These widgets will appear in the left sidebar under the About Widget. They will only appear on a single Article page.',
+        'class' => '',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3 class="bg-primary">',
+        'after_title' => '</h3>'
+    ) );
+
+    register_sidebar( array(
         'id' => 'doing',
         'name' => 'What I am Doing',
         'description' => 'These widgets will appear in the left sidebar under the About Widget. They will only appear when the Jumbotron is visible.',

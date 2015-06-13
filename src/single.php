@@ -27,7 +27,7 @@ $_SPLIT = split_site_name();
 						<?php get_sidebar(  'about' ); ?>
 					</li>
 					<li role="presentation" class="active">
-						<?php get_sidebar( 'blog' ); ?>
+						<?php get_sidebar( 'single' ); ?>
 					</li>
 				</ul>
 			</div>
