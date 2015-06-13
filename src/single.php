@@ -10,7 +10,7 @@ $_SPLIT = split_site_name();
 		<div id="affixed" class="row"
 			data-spy="affix"
 			data-offset-top="0">
-			<h1 id="scrollspy" class="row">
+			<h1 class="scrollspy" class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-pills">
 						<li role="presentation" class="always">
@@ -23,9 +23,16 @@ $_SPLIT = split_site_name();
 				</div>
 			</h1>
 
-			<?php get_sidebar(  'about' ); ?>
-
-			<?php get_sidebar( 'blog' ); ?>
+			<div class="scrollspy">
+				<ul class="nav">
+					<li role="presentation" class="always">
+						<?php get_sidebar(  'about' ); ?>
+					</li>
+					<li role="presentation" class="active">
+						<?php get_sidebar( 'blog' ); ?>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
